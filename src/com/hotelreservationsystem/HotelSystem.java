@@ -45,12 +45,24 @@ public class HotelSystem implements Comparable<Hotel> {
         this.rates = rates;
     }
     public float getWeekendRate() {
+
         return weekendRate;
     }
 
     public void setWeekendRate(int weekendRate) {
+
         this.weekendRate = weekendRate;
     }
+    public int getRatings() {
+        
+        return rates;
+    }
+
+    public void setRatings(int ratings) {
+        this.rates = ratings;
+    }
+
+
     @Override
     public String toString() {
         return "Hotel{" +

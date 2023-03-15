@@ -53,4 +53,14 @@ public class Hotel {
     public int compareTo(Hotel h2) {
         return 0;
     }
+
+    public void setWeekendRate(float weekendRate) {
+    }
+
+    public void setRatings(int ratings) {
+    }
+
+    public float getWeekendRate() {
+        return 0;
+    }
 }
