@@ -2,9 +2,11 @@ package com.hotelreservationsystem;
 
 public class HotelSystem implements Comparable<Hotel> {
     private String hotelName;
-    private  String hotelType;
+    private String hotelType;
     private int rates;
-    private Object rate;
+    private String rate;
+    private String name;
+    private int weekendRate;
 
     public HotelSystem(String hotelName, String hotelType, int rates) {
         this.hotelName = hotelName;
@@ -46,17 +48,19 @@ public class HotelSystem implements Comparable<Hotel> {
     @Override
     public String toString() {
         return "Hotel{" +
-                "hotelName='" + hotelName + '\'' +
-                ", hotelType='" + hotelType + '\'' +
-                ", rates=" + rates +
-                '}';
+                "name='" + name + '\'' +
+                ", rate=" + rate +
+                ", weekendRate=" + weekendRate +'}';
     }
+
+
+
+    public void addHotel () {
+        }
 
     @Override
-    public int compareTo(Hotel h) {
-        return (int) (this.rate - Integer.parseInt((String) h.rate));
-    }
-
-    public void addHotel() {
+    public int compareTo(Hotel o) {
+        return 0;
     }
 }
+
