@@ -1,9 +1,10 @@
 package com.hotelreservationsystem;
 
-public class HotelSystem {
+public class HotelSystem implements Comparable<Hotel> {
     private String hotelName;
     private  String hotelType;
     private int rates;
+    private Object rate;
 
     public HotelSystem(String hotelName, String hotelType, int rates) {
         this.hotelName = hotelName;
@@ -16,10 +17,12 @@ public class HotelSystem {
     }
 
     public String getHotelName() {
+
         return hotelName;
     }
 
     public void setHotelName(String hotelName) {
+
         this.hotelName = hotelName;
     }
 
@@ -28,6 +31,7 @@ public class HotelSystem {
     }
 
     public void setHotelType(String hotelType) {
+
         this.hotelType = hotelType;
     }
 
@@ -46,6 +50,11 @@ public class HotelSystem {
                 ", hotelType='" + hotelType + '\'' +
                 ", rates=" + rates +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Hotel h) {
+        return (int) (this.rate - Integer.parseInt((String) h.rate));
     }
 
     public void addHotel() {
