@@ -44,7 +44,13 @@ public class HotelSystem implements Comparable<Hotel> {
     public void setRates(int rates) {
         this.rates = rates;
     }
+    public float getWeekendRate() {
+        return weekendRate;
+    }
 
+    public void setWeekendRate(int weekendRate) {
+        this.weekendRate = weekendRate;
+    }
     @Override
     public String toString() {
         return "Hotel{" +
@@ -57,6 +63,7 @@ public class HotelSystem implements Comparable<Hotel> {
 
     public void addHotel () {
         }
+
 
     @Override
     public int compareTo(Hotel o) {
